@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="hi">
 <head>
@@ -77,7 +78,7 @@ small{color:#65748b}
 
 <script>
 const SUPABASE_URL = "https://obfscofwdnypjabtgpyy.supabase.co";
-const SUPABASE_KEY = "अपनी_SUPABASE_PUBLISHABLE_KEY_यहाँ_डालें";
+const SUPABASE_KEY = "sb_publishable_NTjzI2NEwJZjPaZDuuU_fQ_TWWtxxm-";
 const db = window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY);
 
 let allJobs = [];
@@ -197,6 +198,7 @@ alert("Job approval के लिए भेज दी गई।");
 db.auth.onAuthStateChange((_event,session)=>{
 currentUser=session?.user||null;
 });
+
 (async()=>{
 const {data}=await db.auth.getSession();
 if(data.session){await loadAccount();}
