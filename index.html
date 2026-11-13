@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Apna Job Hub helps candidates find jobs across Delhi NCR, Haryana, Uttar Pradesh and all India. Apply free.">
+<title>Apna Job Hub | Find Your Next Job</title>
+<style>
+:root{--blue:#155eef;--navy:#102a56;--ink:#172b4d;--muted:#667085;--line:#e5eaf2;--bg:#f5f8fc;--green:#159455}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+a{color:inherit;text-decoration:none}.wrap{max-width:1160px;margin:auto;padding:0 20px}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:850;font-size:21px;color:var(--navy)}.logo-mark{width:38px;height:38px;border-radius:12px;background:var(--blue);color:white;display:grid;place-items:center;font-weight:900}
+nav{display:flex;gap:22px;color:#475467;font-size:14px;font-weight:650}nav a:hover{color:var(--blue)}
+.btn{border:0;border-radius:10px;padding:12px 17px;background:var(--blue);color:#fff;font-weight:750;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px}.btn:hover{filter:brightness(.95)}.btn.light{background:#eef4ff;color:var(--blue)}.btn.outline{background:white;color:var(--blue);border:1px solid #c9d8ff}
+.hero{background:linear-gradient(115deg,#102a56,#155eef);color:#fff;padding:66px 0 72px}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:38px}.eyebrow{font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#c6d8ff}
+h1{font-size:clamp(34px,5vw,54px);line-height:1.08;margin:14px 0 16px;letter-spacing:-.04em}.hero p{font-size:17px;color:#e0eaff;line-height:1.6;max-width:620px}
+.searchbox{background:#fff;border-radius:16px;padding:12px;display:grid;grid-template-columns:1fr 1fr auto;gap:8px;margin-top:26px;box-shadow:0 12px 32px #001b4933}
+input,select,textarea{width:100%;padding:13px 14px;border:1px solid #d8e0ec;border-radius:9px;font:inherit;color:var(--ink);background:#fff;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px #155eef18}
+.hero-card{background:#fff;color:var(--ink);padding:23px;border-radius:18px;box-shadow:0 18px 50px #001b4933}
+.hero-card h3{margin:0 0 8px;font-size:18px}.hero-card p{color:var(--muted);font-size:13px;margin:0 0 16px}.statgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.stat{background:#f4f7fc;padding:15px;border-radius:12px}.stat b{font-size:22px;color:var(--navy);display:block}.stat span{font-size:12px;color:var(--muted)}
+section{padding:48px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:22px}.section-head h2{font-size:27px;margin:0 0 6px;color:var(--navy)}.section-head p{margin:0;color:var(--muted);font-size:14px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 22px}.chip{border:1px solid var(--line);background:white;border-radius:30px;padding:8px 13px;font-size:13px;color:#475467;cursor:pointer}.chip.active{background:#eaf1ff;border-color:#b7ccff;color:var(--blue);font-weight:750}
+.jobs{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.job{background:#fff;border:1px solid var(--line);border-radius:15px;padding:19px;transition:.2s}.job:hover{transform:translateY(-2px);box-shadow:0 12px 28px #142c5010}.jobtop{display:flex;justify-content:space-between;gap:10px}.tag{font-size:11px;font-weight:800;color:var(--green);background:#e8f7ef;padding:6px 9px;border-radius:20px;height:max-content}.job h3{font-size:17px;margin:13px 0 5px}.company{font-size:13px;color:var(--muted)}.meta{display:flex;gap:12px;flex-wrap:wrap;color:#475467;font-size:12px;margin:14px 0}.salary{font-weight:800;color:var(--navy);font-size:15px}.job-actions{display:flex;gap:8px;margin-top:15px}.job-actions button{flex:1}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.feature{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px}.feature .ico{width:42px;height:42px;border-radius:12px;background:#eaf1ff;color:var(--blue);display:grid;place-items:center;font-size:20px}.feature h3{margin:13px 0 6px}.feature p{margin:0;color:var(--muted);font-size:13px;line-height:1.55}
+.panel{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.formgrid .full{grid-column:1/-1}label{display:block;font-size:12px;font-weight:750;color:#475467;margin:0 0 6px}.muted{color:var(--muted);font-size:13px;line-height:1.5}
+.cta{background:#eaf1ff;border:1px solid #d6e3ff;border-radius:18px;padding:28px;display:flex;align-items:center;justify-content:space-between;gap:20px}.cta h2{margin:0 0 6px;color:var(--navy)}.cta p{margin:0;color:#536782;font-size:14px}
+footer{background:#0d2144;color:#d7e3f8;padding:34px 0;margin-top:30px}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot small{color:#a9bbd8}.wa{position:fixed;right:20px;bottom:20px;background:#1ca765;color:#fff;border-radius:50px;padding:14px 18px;font-weight:800;box-shadow:0 8px 24px #001b4933;z-index:12}
+.modal{display:none;position:fixed;inset:0;background:#081a36a8;z-index:30;padding:18px;overflow:auto}.modal.show{display:grid;place-items:center}.modalbox{background:#fff;border-radius:16px;max-width:570px;width:100%;padding:24px;max-height:92vh;overflow:auto}.modalhead{display:flex;justify-content:space-between;align-items:center}.x{border:0;background:#f1f4f9;border-radius:9px;padding:8px 12px;cursor:pointer}
+.admin{display:none}.admin.show{display:block}.notice{background:#fff8e6;border:1px solid #f4dda0;padding:12px;border-radius:10px;color:#795b12;font-size:12px;margin-bottom:15px}
+@media(max-width:800px){nav{display:none}.hero-grid{grid-template-columns:1fr}.hero-card{max-width:520px}.jobs{grid-template-columns:repeat(2,1fr)}.features{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.searchbox{grid-template-columns:1fr}.jobs,.features{grid-template-columns:1fr}.formgrid{grid-template-columns:1fr}.formgrid .full{grid-column:auto}.section-head{align-items:start;flex-direction:column}.hero{padding:48px 0}.cta{align-items:start;flex-direction:column}.nav{height:64px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="logo" href="#"><span class="logo-mark">AJ</span> Apna Job Hub</a>
+  <nav><a href="#jobs">Find Jobs</a><a href="#how">How It Works</a><a href="#recruiter">For Recruiters</a><a href="#contact">Contact</a></nav>
+  <button class="btn" onclick="document.getElementById('jobs').scrollIntoView({behavior:'smooth'})">Find a Job</button>
+</div></header>
+<main>
+<section class="hero"><div class="wrap hero-grid">
+ <div><div class="eyebrow">Your next opportunity starts here</div><h1>Find a job that<br>moves you forward.</h1>
+ <p>Explore job opportunities across Delhi NCR, Haryana, Uttar Pradesh and all India. Candidate applications are free.</p>
+ <div class="searchbox"><input id="searchText" placeholder="Job title or keyword"><select id="searchLoc"><option value="">All locations</option><option>Faridabad</option><option>Delhi</option><option>Gurugram</option><option>Noida</option><option>Ghaziabad</option><option>Panipat</option><option>All India</option></select><button class="btn" onclick="renderJobs()">Search Jobs</button></div>
+ </div>
+ <div class="hero-card"><h3>Jobs for every step</h3><p>Simple job search. Direct applications. No candidate application fee.</p><div class="statgrid"><div class="stat"><b>Free</b><span>Candidate apply</span></div><div class="stat"><b>All India</b><span>Job locations</span></div><div class="stat"><b>Direct</b><span>Recruiter contact</span></div><div class="stat"><b>Easy</b><span>Apply on WhatsApp</span></div></div></div>
+</div></section>
+<section id="jobs"><div class="wrap">
+ <div class="section-head"><div><h2>Latest job openings</h2><p>Explore opportunities and contact the recruiter to apply.</p></div><span class="muted" id="jobCount"></span></div>
+ <div class="chips"><button class="chip active" onclick="setCategory('All',this)">All Jobs</button><button class="chip" onclick="setCategory('Warehouse',this)">Warehouse</button><button class="chip" onclick="setCategory('Delivery',this)">Delivery</button><button class="chip" onclick="setCategory('Retail',this)">Retail</button><button class="chip" onclick="setCategory('Office',this)">Office</button></div>
+ <div class="jobs" id="jobsList"></div>
+ <p class="muted" style="margin-top:14px">Demo listings are sample vacancies. Confirm job details, salary, employer and availability before applying.</p>
+</div></section>
+<section id="how"><div class="wrap"><div class="section-head"><div><h2>How Apna Job Hub works</h2><p>A simple process for candidates and employers.</p></div></div>
+ <div class="features"><div class="feature"><div class="ico">⌕</div><h3>1. Find a job</h3><p>Search by role, category or location to find a suitable opening.</p></div><div class="feature"><div class="ico">➜</div><h3>2. Apply free</h3><p>Share your basic details and job preference directly with the recruiter.</p></div><div class="feature"><div class="ico">✓</div><h3>3. Connect</h3><p>The recruiter can contact you about the next steps and interview.</p></div></div>
+</div></section>
+<section id="recruiter"><div class="wrap"><div class="cta"><div><h2>Are you a recruiter or employer?</h2><p>Share your hiring requirement with Apna Job Hub.</p></div><button class="btn" onclick="openModal('recruiterModal')">Register as Recruiter</button></div></div></section>
+<section id="admin"><div class="wrap"><div class="section-head"><div><h2>Admin tools (prototype)</h2><p>For the site owner to add sample job listings in this browser.</p></div><button class="btn light" onclick="toggleAdmin()">Open Admin</button></div>
+<div class="panel admin" id="adminPanel"><div class="notice">Prototype only: this admin area has no secure login and saves jobs only in this browser. Do not use it for real candidate records or public production administration.</div>
+<div class="formgrid"><div><label>Job title</label><input id="aTitle" placeholder="Picker / Packer"></div><div><label>Company / employer</label><input id="aCompany" placeholder="Company name"></div><div><label>Location</label><input id="aLocation" placeholder="Faridabad, Haryana"></div><div><label>Salary</label><input id="aSalary" placeholder="₹12,000 - ₹16,000"></div><div><label>Category</label><select id="aCategory"><option>Warehouse</option><option>Delivery</option><option>Retail</option><option>Office</option><option>Other</option></select></div><div><label>Job type</label><select id="aType"><option>Full Time</option><option>Part Time</option><option>Contract</option></select></div><div class="full"><label>Job description</label><textarea id="aDesc" rows="3" placeholder="Duty, shift, eligibility, interview details..."></textarea></div><div class="full"><button class="btn" onclick="addJob()">Add Job to this demo</button></div></div></div></div></section>
+<section id="contact"><div class="wrap"><div class="panel"><div class="section-head"><div><h2>Need help?</h2><p>Contact Apna Job Hub for job and recruiter enquiries.</p></div></div><p><b>WhatsApp:</b> +91 81686 55638</p><p><b>Email:</b> Amarsh9599@gmail.com</p><a class="btn" href="https://wa.me/918168655638?text=Hello%20Apna%20Job%20Hub%2C%20I%20need%20help." target="_blank" rel="noopener">Chat on WhatsApp</a></div></div></section>
+</main>
+<footer><div class="wrap foot"><div><div class="logo" style="color:#fff"><span class="logo-mark">AJ</span> Apna Job Hub</div><small>Connecting candidates and opportunities.</small></div><div><small>Delhi NCR · Haryana · Uttar Pradesh · All India<br>© <span id="year"></span> Apna Job Hub</small></div></div></footer>
+<a class="wa" href="https://wa.me/918168655638?text=Hello%20Apna%20Job%20Hub" target="_blank" rel="noopener">WhatsApp ↗</a>
+
+<div class="modal" id="applyModal"><div class="modalbox"><div class="modalhead"><h2>Apply for this job</h2><button class="x" onclick="closeModal('applyModal')">✕</button></div><p class="muted" id="applyJobName"></p><div class="formgrid"><div class="full"><label>Your full name</label><input id="cName" placeholder="Enter your name"></div><div><label>Mobile number</label><input id="cPhone" inputmode="tel" placeholder="10-digit mobile number"></div><div><label>City</label><input id="cCity" placeholder="Your city"></div><div class="full"><label>Experience</label><select id="cExp"><option>Fresher</option><option>Less than 1 year</option><option>1-2 years</option><option>2+ years</option></select></div><div class="full"><label><input type="checkbox" id="consent" style="width:auto"> I agree to share these details with Apna Job Hub/recruiter for this application.</label></div><div class="full"><button class="btn" style="width:100%" onclick="sendApplication()">Continue on WhatsApp</button></div></div><p class="muted">Your details will be sent to the listed contact via WhatsApp. Do not share OTP, bank PIN or payment details.</p></div></div>
+<div class="modal" id="recruiterModal"><div class="modalbox"><div class="modalhead"><h2>Recruiter registration</h2><button class="x" onclick="closeModal('recruiterModal')">✕</button></div><p class="muted">Tell us about your hiring requirement. Our team will contact you.</p><div class="formgrid"><div><label>Recruiter / company name</label><input id="rName" placeholder="Your name or company"></div><div><label>Mobile number</label><input id="rPhone" placeholder="10-digit mobile" inputmode="tel"></div><div><label>Email</label><input id="rEmail" placeholder="name@company.com"></div><div><label>Hiring location</label><input id="rLocation" placeholder="City, state"></div><div class="full"><label>Roles / number of vacancies</label><textarea id="rNeed" rows="3" placeholder="e.g. 20 warehouse associates"></textarea></div><div class="full"><button class="btn" style="width:100%" onclick="sendRecruiter()">Send registration on WhatsApp</button></div></div></div></div>
+<script>
+const WA='918168655638';
+const demoJobs=[
+{id:1,title:'Warehouse Picker / Packer',company:'Hiring Partner (sample listing)',location:'Faridabad, Haryana',salary:'₹12,000 - ₹16,000 / month',category:'Warehouse',type:'Full Time',desc:'Warehouse picking and packing role. Confirm shift, in-hand salary, documents and employer details before joining.'},
+{id:2,title:'Delivery Executive',company:'Hiring Partner (sample listing)',location:'Delhi NCR',salary:'₹15,000 - ₹22,000 / month',category:'Delivery',type:'Full Time',desc:'Delivery role in Delhi NCR. Confirm vehicle, fuel policy, incentive and working hours.'},
+{id:3,title:'Store Associate',company:'Hiring Partner (sample listing)',location:'Noida, Uttar Pradesh',salary:'₹11,000 - ₹15,000 / month',category:'Retail',type:'Full Time',desc:'Retail store support role. Confirm shift timings and exact workplace before applying.'}
+];
+let jobs=JSON.parse(localStorage.getItem('ajh_jobs')||'null')||demoJobs;
+let category='All', selectedJob=null;
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function renderJobs(){
+ const q=document.getElementById('searchText').value.toLowerCase(),loc=document.getElementById('searchLoc').value.toLowerCase();
+ const filtered=jobs.filter(j=>(category==='All'||j.category===category)&&(`${j.title} ${j.company} ${j.location} ${j.category}`).toLowerCase().includes(q)&&(!loc||j.location.toLowerCase().includes(loc)||loc==='all india'));
+ document.getElementById('jobCount').textContent=filtered.length+' jobs shown';
+ document.getElementById('jobsList').innerHTML=filtered.length?filtered.map(j=>`<article class="job"><div class="jobtop"><span class="tag">Hiring</span><span class="muted">${esc(j.type)}</span></div><h3>${esc(j.title)}</h3><div class="company">${esc(j.company)}</div><div class="meta"><span>📍 ${esc(j.location)}</span><span>▦ ${esc(j.category)}</span></div><div class="salary">${esc(j.salary)}</div><p class="muted">${esc(j.desc)}</p><div class="job-actions"><button class="btn" onclick="openApply(${j.id})">Apply Free</button><button class="btn light" onclick="shareJob(${j.id})">Share</button></div></article>`).join(''):'<div class="panel">No jobs match your search right now. Try another location or keyword.</div>';
+}
+function setCategory(c,el){category=c;document.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));el.classList.add('active');renderJobs()}
+function openModal(id){document.getElementById(id).classList.add('show')}function closeModal(id){document.getElementById(id).classList.remove('show')}
+function openApply(id){selectedJob=jobs.find(j=>j.id===id);document.getElementById('applyJobName').textContent=selectedJob.title+' — '+selectedJob.location;openModal('applyModal')}
+function sendApplication(){
+ const name=document.getElementById('cName').value.trim(),phone=document.getElementById('cPhone').value.trim(),city=document.getElementById('cCity').value.trim();
+ if(!name||!phone||!city||!document.getElementById('consent').checked){alert('Please enter your name, mobile, city and give consent.');return}
+ if(!/^[0-9+\-\s]{10,15}$/.test(phone)){alert('Please enter a valid mobile number.');return}
+ const msg=`Job application - Apna Job Hub\nJob: ${selectedJob.title}\nLocation: ${selectedJob.location}\nName: ${name}\nMobile: ${phone}\nCity: ${city}\nExperience: ${document.getElementById('cExp').value}\nI agree to share these details for this application.`;
+ window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(msg),'_blank');closeModal('applyModal');
+}
+function sendRecruiter(){
+ const name=document.getElementById('rName').value.trim(),phone=document.getElementById('rPhone').value.trim(),need=document.getElementById('rNeed').value.trim();
+ if(!name||!phone||!need){alert('Please enter recruiter/company name, mobile and hiring requirement.');return}
+ const msg=`Recruiter registration - Apna Job Hub\nName/Company: ${name}\nMobile: ${phone}\nEmail: ${document.getElementById('rEmail').value}\nHiring location: ${document.getElementById('rLocation').value}\nRequirement: ${need}`;
+ window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(msg),'_blank');closeModal('recruiterModal');
+}
+function shareJob(id){const j=jobs.find(x=>x.id===id);const t=`${j.title} | ${j.location} | ${j.salary} - Apna Job Hub`;if(navigator.share)navigator.share({title:'Apna Job Hub',text:t,url:location.href});else navigator.clipboard?.writeText(t).then(()=>alert('Job details copied.'))}
+function toggleAdmin(){document.getElementById('adminPanel').classList.toggle('show')}
+function addJob(){
+ const title=document.getElementById('aTitle').value.trim(),company=document.getElementById('aCompany').value.trim(),location=document.getElementById('aLocation').value.trim(),salary=document.getElementById('aSalary').value.trim();
+ if(!title||!company||!location||!salary){alert('Please fill title, company, location and salary.');return}
+ jobs.unshift({id:Date.now(),title,company,location,salary,category:document.getElementById('aCategory').value,type:document.getElementById('aType').value,desc:document.getElementById('aDesc').value.trim()});
+ localStorage.setItem('ajh_jobs',JSON.stringify(jobs));renderJobs();alert('Job added in this browser demo.');['aTitle','aCompany','aLocation','aSalary','aDesc'].forEach(id=>document.getElementById(id).value='');
+}
+document.getElementById('year').textContent=new Date().getFullYear();renderJobs();
+</script>
+</body></html>
